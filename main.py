@@ -74,23 +74,19 @@ def main():
         toolbox.register("mutate", tools.mutGaussian, mu=5, sigma=10, indpb=0.9)
 
     print("Set size of population: ")
-    # user_input_population_size = input()
-    user_input_population_size = '50'
+    user_input_population_size = input()
     sizePopulation = int(user_input_population_size)
 
     print("Set mutation probablility: ")
-    # user_input_mutation_probability = input()
-    user_input_mutation_probability = '0.1'
+    user_input_mutation_probability = input()
     probabilityMutation = float(user_input_mutation_probability)
 
     print("Set crossover probability: ")
-    # user_input_crossover_probability = input()
-    user_input_crossover_probability = '0.9'
+    user_input_crossover_probability = input()
     probabilityCrossover = float(user_input_crossover_probability)
 
     print("Set number of generations: ")
-    # user_input_number_of_generations = input()
-    user_input_number_of_generations = '50'
+    user_input_number_of_generations = input()
     numberIteration = int(user_input_number_of_generations)
 
     pop = toolbox.population(n=sizePopulation)
@@ -167,6 +163,7 @@ def main():
     plt.plot(plot_std)
     plt.ylabel('Standard deviation')
     plt.show()
+
 
 if __name__ == '__main__':
     main()
